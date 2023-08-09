@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Course</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F3E5F5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      text-align: center;
+      padding: 30px;
+      background-color: #FFFFFF; /* White */
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      color: #9C27B0; /* Purple */
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 18px;
+      color: #9C27B0; /* Purple */
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      color: #9C27B0; /* Purple */
+      background-color: #FFFAF0; /* FloralWhite */
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #9C27B0; /* Purple */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #7B1FA2; /* Darker shade on hover */
+    }
+  </style>
+</head>
+<body>
+<form action="#" th:action="@{/student/__${id}__/__${route}__}" th:object="${mark}" method="post">
+  <h1>Choose Course</h1>
+  <label for="course">Choose Course</label>
+  <select name="course" id="course">
+    <option value="Biology">Biology</option>
+    <option value="Physics">Physics</option>
+    <option value="Mathematics">Mathematics</option>
+  </select>
+  <input type="submit" value="Submit" />
+</form>
+</body>
+</html>

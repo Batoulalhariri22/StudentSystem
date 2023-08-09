@@ -1,0 +1,134 @@
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--  <title> home </title>-->
+<!--  <style>-->
+<!--    /* Set a background gradient */-->
+<!--    body {-->
+<!--      background-color: #f2f2f2;-->
+<!--      font-family: Arial, sans-serif;-->
+<!--    }-->
+
+<!--    h1 {-->
+<!--      text-align: center;-->
+<!--      color: #333;-->
+<!--      margin-top: 40px;-->
+<!--    }-->
+
+<!--    h2 {-->
+<!--      color: cornflowerblue;-->
+<!--      font-weight: bold;-->
+<!--    }-->
+
+<!--    #container {-->
+<!--      margin: 30px auto;-->
+<!--      text-align: center;-->
+<!--      max-width: 800px;-->
+<!--      padding: 20px;-->
+<!--      background-color: white;-->
+<!--      border-radius: 10px;-->
+<!--      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);-->
+<!--    }-->
+
+<!--    a {-->
+<!--      display: block;-->
+<!--      margin: 10px auto;-->
+<!--      padding: 10px 20px;-->
+<!--      width: 200px;-->
+<!--      background-color: cornflowerblue;-->
+<!--      color: white;-->
+<!--      text-decoration: none;-->
+<!--      border-radius: 5px;-->
+<!--      transition: background-color 0.2s ease-in-out;-->
+<!--    }-->
+
+<!--    a:hover {-->
+<!--      background-color: green;-->
+<!--    }-->
+<!--    #uniqueid:hover {-->
+<!--      background-color: red;-->
+<!--    }-->
+<!--  </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1> Welcome To Home Page </h1>-->
+<!--<h2 style="text-align:center;" > Pick your service: </h2>-->
+<!--<div id = "container">-->
+<!--  <a th:href="@{'/student/' + ${id} + '/marks' }" >View all student marks.</a>-->
+<!--  <a th:href="@{'/student/' + ${id} + '/mark' }" > View a single student mark.</a>-->
+<!--  <a th:href="@{'/student/' + ${id} + '/average' }" >View the course average mark.</a>-->
+<!--  <a th:href="@{'/student/' + ${id} + '/max' }" >View the course the highest mark.</a>-->
+<!--  <a th:href="@{'/student/' + ${id} + '/min' }">View the student's lowest mark.</a>-->
+<!--  <a th:href="@{'/student/' + ${id} + '/median' }">View the course median mark.</a>-->
+<!--  <a href="/logout" id="uniqueid">Logout</a>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title> home </title>
+  <style>
+    /* Set a background gradient */
+    body {
+      background-color: #F3E5F5; /* Lavender Blush */
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      color: #9C27B0; /* Purple */
+      margin-top: 40px;
+    }
+
+    h2 {
+      color: #00BCD4; /* Cyan */
+      font-weight: bold;
+    }
+
+    #container {
+      margin: 30px auto;
+      text-align: center;
+      max-width: 800px;
+      padding: 20px;
+      background-color: #FFFFFF; /* White */
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    a {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      width: 200px;
+      background-color: #00BCD4; /* Cyan */
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    a:hover {
+      background-color: #0097A7; /* Dark Cyan */
+    }
+    #uniqueid:hover {
+      background-color: #7B1FA2; /* Dark Purple */
+    }
+  </style>
+</head>
+<body>
+<h1> Welcome To Home Page </h1>
+<h2 style="text-align:center;"> Pick your service: </h2>
+<div id="container">
+  <a th:href="@{'/student/' + ${id} + '/marks' }" >View all student marks.</a>
+  <a th:href="@{'/student/' + ${id} + '/mark' }" > View a single student mark.</a>
+  <a th:href="@{'/student/' + ${id} + '/average' }" >View the course average mark.</a>
+  <a th:href="@{'/student/' + ${id} + '/max' }" >View the course the highest mark.</a>
+  <a th:href="@{'/student/' + ${id} + '/min' }">View the student's lowest mark.</a>
+  <a th:href="@{'/student/' + ${id} + '/median' }">View the course median mark.</a>
+  <a href="/logout" id="uniqueid">Logout</a>
+</div>
+</body>
+</html>
